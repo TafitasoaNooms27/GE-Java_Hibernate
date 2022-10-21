@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>AffectationEmploye</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- EMPLOYE  -->
+  <!-- LISTES DES LIEU -->
+  <servlet>
+  	<servlet-name>Employe</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.employe.EmployeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Employe</servlet-name>
+  	<url-pattern>/employe</url-pattern>
+  </servlet-mapping>
+  
+ 
+    <!-- AJOUTS DES EMPLOYES -->
+  <servlet>
+  	<servlet-name>AddEmp</servlet-name>
+  	<jsp-file>/addEmploye.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddEmp</servlet-name>
+  	<url-pattern>/employe-add</url-pattern>
+  </servlet-mapping>
+  
+
+  <servlet>
+  	<servlet-name>EmpAdd</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.employe.AddEmpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EmpAdd</servlet-name>
+  	<url-pattern>/emp-add</url-pattern>
+  </servlet-mapping>
+  
+  
+   <!-- MODDIFIER DES EMPLOYES -->
+  <servlet>
+  	<servlet-name>EmpEdit</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.employe.EditEmpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EmpEdit</servlet-name>
+  	<url-pattern>/emp-edit</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>EmpUpdate</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.employe.EmployeUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EmpUpdate</servlet-name>
+  	<url-pattern>/emp-update</url-pattern>
+  </servlet-mapping>
+  
+  
+   <!-- SUPPRESSION DES EMPLOYES -->
+  <servlet>
+  	<servlet-name>EmpDelete</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.employe.DeleteEmpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EmpDelete</servlet-name>
+  	<url-pattern>/emp-delete</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!--LIEU  -->
+  <!-- LISTES DES LIEU -->
+   <servlet>
+  	<servlet-name>Lieu</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.lieu.LieuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Lieu</servlet-name>
+  	<url-pattern>/lieu</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- AJOUT DES LIEU  -->
+  <servlet>
+  	<servlet-name>AddLieu</servlet-name>
+  	<jsp-file>/addLieu.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddLieu</servlet-name>
+  	<url-pattern>/lieu-add</url-pattern>
+  </servlet-mapping>
+  
+
+  <servlet>
+  	<servlet-name>LieuAdd</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.lieu.AddLieuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LieuAdd</servlet-name>
+  	<url-pattern>/li-add</url-pattern>
+  </servlet-mapping>
+  
+  
+   <!-- MODDIFIER DES LIEU -->
+  <servlet>
+  	<servlet-name>LieuEdit</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.lieu.EditLieuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LieuEdit</servlet-name>
+  	<url-pattern>/li-edit</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>LieuUpdate</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.lieu.LieuUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LieuUpdate</servlet-name>
+  	<url-pattern>/lieu-update</url-pattern>
+  </servlet-mapping>
+  
+  
+   <!-- SUPPRESSION DES LIEU -->
+  <servlet>
+  	<servlet-name>LieuDelete</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.lieu.DeleteLieuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LieuDelete</servlet-name>
+  	<url-pattern>/li-delete</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- AFFECTER  -->
+  <!-- LISTES DES AFFECTERS -->
+  <servlet>
+  	<servlet-name>Affecter</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.affectation.AffecterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Affecter</servlet-name>
+  	<url-pattern>/affecter</url-pattern>
+  </servlet-mapping>
+  
+   <!-- AJOUT DES AFFECTER  -->
+   <!-- POUR GET EMPLOYE -->
+    <servlet>
+  	<servlet-name>AffecGet</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.affectation.AffecterGetEmployeAndLieuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AffecGet</servlet-name>
+  	<url-pattern>/Affec-get</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+  	<servlet-name>AddAffecter</servlet-name>
+  	<jsp-file>/addAffecter.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddAffecter</servlet-name>
+  	<url-pattern>/affecter-add</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>AffecterAdd</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.affectation.addAffecterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AffecterAdd</servlet-name>
+  	<url-pattern>/affec-add</url-pattern>
+  </servlet-mapping>
+
+
+<!-- MODIFICATION AFFECTATIONS -->
+<servlet>
+  	<servlet-name>AffecterEdit</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.affectation.EditAffecterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AffecterEdit</servlet-name>
+  	<url-pattern>/affec-edit</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>AffecterUpdate</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.affectation.AffecterUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AffecterUpdate</servlet-name>
+  	<url-pattern>/affec-update</url-pattern>
+  </servlet-mapping>
+   
+   <!-- SUPPRESSION AFFECTATIONS -->
+   <servlet>
+  	<servlet-name>AffecterDelete</servlet-name>
+  	<servlet-class>com.eni.affecemploye.controller.affectation.DeleteAffecterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AffecterDelete</servlet-name>
+  	<url-pattern>/affect-delete</url-pattern>
+  </servlet-mapping>
+</web-app>
